@@ -1,16 +1,35 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <title>Rotating Line</title>
+    <style>
+        #line {
+            width: 200px;
+            height: 2px;
+            background-color: black;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform-origin: 0% 50%;
+            animation: rotateLine 20ms linear infinite;
+        }
+
+        @keyframes rotateLine {
+            from {
+                transform: translateX(-90%) rotate(80deg);
+            }
+            to {
+                transform: translateX(-90%) rotate(26deg);
+            }
+        }
+    </style>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+    <div id="line"></div>
 
+    <script>
+        // JavaScript is not needed for the rotation animation.
+    </script>
 </body>
-
 </html>
